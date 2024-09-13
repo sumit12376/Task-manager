@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit File</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-black text-white flex items-center justify-center min-h-screen">
+    <div class="w-full max-w-md">
+        <a href="/" class="text-blue-400 hover:text-blue-300 transition duration-300 mb-10 block text-center">Go back home</a>
+        <form action="/edit" method="post">
+            <div class="flex flex-col mb-6">
+                <label for="previous" class="mb-2">Previous filename:</label>
+                <input id="previous" type="text" class="block w-full px-5 py-2 mb-4 bg-zinc-800 text-white rounded" value="<%=file%>" placeholder="Previous filename" name="previous">
+            </div>
+            <div class="flex flex-col mb-6">
+                <label for="new" class="mb-2">New filename:</label>
+                <input id="new" type="text" class="block w-full px-5 py-2 mb-4 bg-zinc-800 text-white rounded" placeholder="New filename" name="new">
+            </div>
+            <button type="submit" class="block w-full px-5 py-2 bg-blue-600 text-white rounded cursor-pointer">Rename File</button>
+        </form>
+    </div>
+</body>
+
+</html>
